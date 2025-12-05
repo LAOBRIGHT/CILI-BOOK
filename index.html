@@ -15,22 +15,29 @@
                 <img src="src/asset/img/logo/CILI.png" alt="CILI Logo" class="logo-img">
                 <span class="brand-name">CILI</span>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home" data-en="Home" data-lo="ໜ້າຫຼັກ" data-th="หน้าแรก">Home</a></li>
-                <li><a href="#books" data-en="Books" data-lo="ປຶ້ມ" data-th="หนังสือ">Books</a></li>
-                <li><a href="#about" data-en="About" data-lo="ກ່ຽວກັບ" data-th="เกี่ยวกับ">About</a></li>
-                <li><a href="#contact" data-en="Contact" data-lo="ຕິດຕໍ່" data-th="ติดต่อ">Contact</a></li>
-            </ul>
-            <div class="language-dropdown">
-                <button class="dropdown-btn">
-                    <span class="current-lang">EN</span>
-                    <span class="dropdown-arrow">▼</span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li data-lang="en" class="active">🇬🇧 English</li>
-                    <li data-lang="lo">🇱🇦 ພາສາລາວ</li>
-                    <li data-lang="th">🇹🇭 ภาษาไทย</li>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#home" data-en="Home" data-lo="ໜ້າຫຼັກ" data-th="หน้าแรก">Home</a></li>
+                    <li><a href="#books" data-en="Books" data-lo="ປຶ້ມ" data-th="หนังสือ">Books</a></li>
+                    <li><a href="#about" data-en="About" data-lo="ກ່ຽວກັບ" data-th="เกี่ยวกับ">About</a></li>
+                    <li><a href="#contact" data-en="Contact" data-lo="ຕິດຕໍ່" data-th="ติดต่อ">Contact</a></li>
                 </ul>
+                <div class="language-dropdown">
+                    <button class="dropdown-btn">
+                        <span class="current-lang">EN</span>
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li data-lang="en" class="active">🇬🇧 English</li>
+                        <li data-lang="lo">🇱🇦 ພາສາລາວ</li>
+                        <li data-lang="th">🇹🇭 ภาษาไทย</li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -38,10 +45,14 @@
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1>Welcome to <span class="highlight">CILI</span></h1>
-                <p class="hero-subtitle" data-en="Your One-Stop Shop for HSK Books" data-lo="ຮ້ານຂາຍປຶ້ມ HSK ຄົບວົງຈອນຂອງທ່ານ" data-th="ร้านหนังสือ HSK ครบวงจรของคุณ">Your One-Stop Shop for HSK Books</p>
-                <p class="tagline" data-en="Quality Chinese learning books for HSK Levels 1-6" data-lo="ປຶ້ມຮຽນພາສາຈີນຄຸນນະພາບສູງສຳລັບ HSK ລະດັບ 1-6" data-th="หนังสือเรียนภาษาจีนคุณภาพสำหรับ HSK ระดับ 1-6">Quality Chinese learning books for HSK Levels 1-6</p>
-                <a href="#books" class="cta-button" data-en="Browse Our Books" data-lo="ເບິ່ງປຶ້ມຂອງເຮົາ" data-th="ดูหนังสือของเรา">Browse Our Books</a>
+                <img src="src/asset/img/logo/CILI.png" alt="CILI Logo" class="hero-logo">
+                <img src="src/asset/img/icon/CILI-Robot-Elephant.png" alt="CILI Mascot" class="hero-mascot">
+                <div class="hero-text">
+                    <h1>Welcome to <span class="highlight">CILI</span></h1>
+                    <p class="hero-subtitle" data-en="Your One-Stop Shop for HSK Books" data-lo="ຮ້ານຂາຍປຶ້ມ HSK ຄົບວົງຈອນຂອງທ່ານ" data-th="ร้านหนังสือ HSK ครบวงจรของคุณ">Your One-Stop Shop for HSK Books</p>
+                    <p class="tagline" data-en="Quality Chinese learning books for HSK Levels 1-6" data-lo="ປຶ້ມຮຽນພາສາຈີນຄຸນນະພາບສູງສຳລັບ HSK ລະດັບ 1-6" data-th="หนังสือเรียนภาษาจีนคุณภาพสำหรับ HSK ระดับ 1-6">Quality Chinese learning books for HSK Levels 1-6</p>
+                    <a href="#books" class="cta-button" data-en="Browse Our Books" data-lo="ເບິ່ງປຶ້ມຂອງເຮົາ" data-th="ดูหนังสือของเรา">Browse Our Books</a>
+                </div>
             </div>
         </section>
 
@@ -411,6 +422,34 @@
 
         // Initialize
         updateCarousel();
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navRight = document.querySelector('.nav-right');
+            const menuToggle = document.querySelector('.menu-toggle');
+            navRight.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navRight = document.querySelector('.nav-right');
+                const menuToggle = document.querySelector('.menu-toggle');
+                navRight.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const navRight = document.querySelector('.nav-right');
+            const menuToggle = document.querySelector('.menu-toggle');
+            if (!e.target.closest('.navbar')) {
+                navRight.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
     </script>
 </body>
 </html>
