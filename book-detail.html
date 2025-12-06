@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSK Book - CILI</title>
+    <link rel="icon" type="image/png" href="src/asset/img/logo/CILI.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="book-detail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Sans+Lao:wght@300;400;500;700&family=Noto+Sans+Thai:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+                    <img src="src/asset/img/logo/CILI.png" alt="CILI Logo" class="logo-img">
+                    <span class="brand-name">CILI</span>
+                </a>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html#home" data-en="Home" data-lo="ໜ້າຫຼັກ" data-th="หน้าแรก">Home</a></li>
+                    <li><a href="index.html#books" data-en="Books" data-lo="ປຶ້ມ" data-th="หนังสือ">Books</a></li>
+                    <li><a href="index.html#about" data-en="About" data-lo="ກ່ຽວກັບ" data-th="เกี่ยวกับ">About</a></li>
+                    <li><a href="index.html#contact" data-en="Contact" data-lo="ຕິດຕໍ່" data-th="ติดต่อ">Contact</a></li>
+                </ul>
+                <div class="language-dropdown">
+                    <button class="dropdown-btn">
+                        <span class="current-lang">EN</span>
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li data-lang="en" class="active">🇬🇧 English</li>
+                        <li data-lang="lo">🇱🇦 ພາສາລາວ</li>
+                        <li data-lang="th">🇹🇭 ภาษาไทย</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="book-detail-page">
+        <!-- Back Button -->
+        <a href="index.html#books" class="back-button">
+            <span>←</span>
+            <span data-en="Back to Books" data-lo="ກັບຄືນໄປປຶ້ມ" data-th="กลับไปหนังสือ">Back to Books</span>
+        </a>
+
+        <div class="book-exhibition">
+            <!-- Book Image Section -->
+            <div class="book-showcase">
+                <div class="book-image-container">
+                    <img id="bookImage" src="src/asset/img/Books/3DBOOKS/HSK_1_CILI_3D_No_Background.png" alt="HSK Book">
+                </div>
+                <div class="book-badge" id="levelBadge">HSK 1</div>
+            </div>
+
+            <!-- Book Info Section -->
+            <div class="book-info-section">
+                <div class="book-header">
+                    <span class="book-category" data-en="Chinese Learning" data-lo="ຮຽນພາສາຈີນ" data-th="เรียนภาษาจีน">Chinese Learning</span>
+                    <h1 id="bookTitle" data-en="HSK 1 Book" data-lo="ປຶ້ມ HSK 1" data-th="หนังสือ HSK 1">HSK 1 Book</h1>
+                    <p class="book-chinese" id="bookChinese">初级一</p>
+                    <p class="book-level" id="bookLevel" data-en="Beginner Level" data-lo="ລະດັບເລີ່ມຕົ້ນ" data-th="ระดับเริ่มต้น">Beginner Level</p>
+                </div>
+
+                <div class="book-description">
+                    <h3 data-en="About This Book" data-lo="ກ່ຽວກັບປຶ້ມນີ້" data-th="เกี่ยวกับหนังสือเล่มนี้">About This Book</h3>
+                    <p id="bookDescription" data-en="Perfect for beginners starting their Chinese learning journey. This comprehensive guide covers 150 essential vocabulary words with detailed exercises, practice tests, and audio materials to help you master HSK Level 1." data-lo="ເໝາະສຳລັບຜູ້ເລີ່ມຕົ້ນທີ່ເລີ່ມການຮຽນພາສາຈີນ. ຄູ່ມືຄົບຖ້ວນນີ້ກວມເອົາ 150 ຄຳສັບທີ່ຈຳເປັນພ້ອມແບບຝຶກຫັດລະອຽດ, ບົດທົດສອບ, ແລະ ສື່ສຽງເພື່ອຊ່ວຍໃຫ້ທ່ານຊຳນານ HSK ລະດັບ 1." data-th="เหมาะสำหรับผู้เริ่มต้นที่เริ่มเรียนภาษาจีน คู่มือครบถ้วนนี้ครอบคลุม 150 คำศัพท์ที่จำเป็นพร้อมแบบฝึกหัดละเอียด ข้อสอบ และสื่อเสียงเพื่อช่วยให้คุณเชี่ยวชาญ HSK ระดับ 1">Perfect for beginners starting their Chinese learning journey. This comprehensive guide covers 150 essential vocabulary words with detailed exercises, practice tests, and audio materials to help you master HSK Level 1.</p>
+                </div>
+
+                <div class="book-features">
+                    <h3 data-en="What's Included" data-lo="ສິ່ງທີ່ລວມຢູ່" data-th="สิ่งที่รวมอยู่">What's Included</h3>
+                    <ul class="features-list" id="featuresList">
+                        <li>
+                            <span class="feature-icon">📚</span>
+                            <span data-en="150 Essential Vocabulary Words" data-lo="150 ຄຳສັບທີ່ຈຳເປັນ" data-th="150 คำศัพท์ที่จำเป็น">150 Essential Vocabulary Words</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">✍️</span>
+                            <span data-en="Practice Exercises" data-lo="ແບບຝຶກຫັດ" data-th="แบบฝึกหัด">Practice Exercises</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">📝</span>
+                            <span data-en="Mock Tests" data-lo="ບົດທົດສອບ" data-th="ข้อสอบจำลอง">Mock Tests</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">🎧</span>
+                            <span data-en="Audio Materials" data-lo="ສື່ສຽງ" data-th="สื่อเสียง">Audio Materials</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">📖</span>
+                            <span data-en="Grammar Explanations" data-lo="ຄຳອະທິບາຍໄວຍາກອນ" data-th="คำอธิบายไวยากรณ์">Grammar Explanations</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="book-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="wordCount">150</span>
+                        <span class="stat-label" data-en="Words" data-lo="ຄຳ" data-th="คำ">Words</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="lessonCount">15</span>
+                        <span class="stat-label" data-en="Lessons" data-lo="ບົດຮຽນ" data-th="บทเรียน">Lessons</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="testCount">5</span>
+                        <span class="stat-label" data-en="Tests" data-lo="ບົດທົດສອບ" data-th="ข้อสอบ">Tests</span>
+                    </div>
+                </div>
+
+                <div class="book-actions">
+                    <a href="#" class="btn-primary" data-en="Buy Now" data-lo="ຊື້ດຽວນີ້" data-th="ซื้อเลย">Buy Now</a>
+                    <a href="index.html#contact" class="btn-secondary" data-en="Contact Us" data-lo="ຕິດຕໍ່ພວກເຮົາ" data-th="ติดต่อเรา">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Other Books Section -->
+        <section class="other-books">
+            <h2 data-en="Explore Other Levels" data-lo="ສຳຫຼວດລະດັບອື່ນໆ" data-th="สำรวจระดับอื่นๆ">Explore Other Levels</h2>
+            <div class="other-books-grid" id="otherBooksGrid">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 CILI Books.</p>
+            <p data-en="Your trusted source for HSK learning books" data-lo="ແຫຼ່ງທີ່ເຊື່ອຖືໄດ້ສຳລັບປຶ້ມຮຽນ HSK" data-th="แหล่งที่เชื่อถือได้สำหรับหนังสือเรียน HSK">Your trusted source for HSK learning books</p>
+        </div>
+    </footer>
+
+    <script>
+        // Book Data
+        const bookData = {
+            1: {
+                title: { en: "HSK 1 Book", lo: "ປຶ້ມ HSK 1", th: "หนังสือ HSK 1" },
+                chinese: "初级一",
+                level: { en: "Beginner Level", lo: "ລະດັບເລີ່ມຕົ້ນ", th: "ระดับเริ่มต้น" },
+                description: {
+                    en: "Perfect for beginners starting their Chinese learning journey. This comprehensive guide covers 150 essential vocabulary words with detailed exercises, practice tests, and audio materials to help you master HSK Level 1.",
+                    lo: "ເໝາະສຳລັບຜູ້ເລີ່ມຕົ້ນທີ່ເລີ່ມການຮຽນພາສາຈີນ. ຄູ່ມືຄົບຖ້ວນນີ້ກວມເອົາ 150 ຄຳສັບທີ່ຈຳເປັນພ້ອມແບບຝຶກຫັດລະອຽດ, ບົດທົດສອບ, ແລະ ສື່ສຽງ.",
+                    th: "เหมาะสำหรับผู้เริ่มต้นที่เริ่มเรียนภาษาจีน คู่มือครบถ้วนนี้ครอบคลุม 150 คำศัพท์ที่จำเป็นพร้อมแบบฝึกหัดละเอียด ข้อสอบ และสื่อเสียง"
+                },
+                image: "src/asset/img/Books/3DBOOKS/HSK_1_CILI_3D_No_Background.png",
+                words: 150, lessons: 15, tests: 5,
+                color: "#22c55e"
+            },
+            2: {
+                title: { en: "HSK 2 Book", lo: "ປຶ້ມ HSK 2", th: "หนังสือ HSK 2" },
+                chinese: "初级二",
+                level: { en: "Elementary Level", lo: "ລະດັບພື້ນຖານ", th: "ระดับพื้นฐาน" },
+                description: {
+                    en: "Build on your basics with 300 vocabulary words. This book includes engaging dialogues, comprehensive grammar explanations, and practical exercises to advance your Chinese skills.",
+                    lo: "ສ້າງພື້ນຖານດ້ວຍ 300 ຄຳສັບ. ປຶ້ມນີ້ລວມບົດສົນທະນາ, ຄຳອະທິບາຍໄວຍາກອນຄົບຖ້ວນ, ແລະ ແບບຝຶກຫັດພາກປະຕິບັດ.",
+                    th: "ต่อยอดพื้นฐานด้วย 300 คำศัพท์ หนังสือเล่มนี้รวมบทสนทนา คำอธิบายไวยากรณ์ครบถ้วน และแบบฝึกหัดภาคปฏิบัติ"
+                },
+                image: "src/asset/img/Books/3DBOOKS/HSK_2_CILI_3D_No_Background.png",
+                words: 300, lessons: 20, tests: 6,
+                color: "#3b82f6"
+            },
+            3: {
+                title: { en: "HSK 3 Book", lo: "ປຶ້ມ HSK 3", th: "หนังสือ HSK 3" },
+                chinese: "中级一",
+                level: { en: "Intermediate Level", lo: "ລະດັບກາງ", th: "ระดับกลาง" },
+                description: {
+                    en: "Intermediate content with 600 vocabulary words. Features extensive reading passages, writing exercises, and cultural insights to deepen your understanding of Chinese.",
+                    lo: "ເນື້ອຫາລະດັບກາງ ມີ 600 ຄຳສັບ. ມີບົດອ່ານຫຼາຍ, ແບບຝຶກຫັດຂຽນ, ແລະ ຄວາມຮູ້ວັດທະນະທຳເພື່ອເຂົ້າໃຈພາສາຈີນເລິກເຊິ່ງ.",
+                    th: "เนื้อหาระดับกลาง มี 600 คำศัพท์ มีบทอ่านมากมาย แบบฝึกหัดเขียน และความรู้วัฒนธรรมเพื่อเข้าใจภาษาจีนลึกซึ้ง"
+                },
+                image: "src/asset/img/Books/3DBOOKS/HSK_3_CILI_3D_No_Background.png",
+                words: 600, lessons: 25, tests: 8,
+                color: "#a855f7"
+            },
+            4: {
+                title: { en: "HSK 4 Book", lo: "ປຶ້ມ HSK 4", th: "หนังสือ HSK 4" },
+                chinese: "中级二",
+                level: { en: "Upper-Intermediate", lo: "ລະດັບກາງ-ສູງ", th: "ระดับกลาง-สูง" },
+                description: {
+                    en: "Upper-intermediate with 1200 vocabulary words. Comprehensive exam preparation with authentic materials, advanced grammar, and extensive practice tests.",
+                    lo: "ລະດັບກາງ-ສູງ ມີ 1200 ຄຳສັບ. ກຽມສອບເສັງຄົບຖ້ວນດ້ວຍເອກະສານແທ້, ໄວຍາກອນຂັ້ນສູງ, ແລະ ບົດທົດສອບຫຼາຍ.",
+                    th: "ระดับกลาง-สูง มี 1200 คำศัพท์ เตรียมสอบครบถ้วนด้วยเอกสารแท้ ไวยากรณ์ขั้นสูง และข้อสอบมากมาย"
+                },
+                image: "src/asset/img/Books/3DBOOKS/HSK_4_CILI_3D_No_Background.png",
+                words: 1200, lessons: 30, tests: 10,
+                color: "#f59e0b"
+            },
+            5: {
+                title: { en: "HSK 5 Book", lo: "ປຶ້ມ HSK 5", th: "หนังสือ HSK 5" },
+                chinese: "高级一",
+                level: { en: "Advanced Level", lo: "ລະດັບສູງ", th: "ระดับสูง" },
+                description: {
+                    en: "Advanced content with 2500 vocabulary words. Includes authentic Chinese texts, essay writing techniques, and comprehensive preparation for advanced proficiency.",
+                    lo: "ເນື້ອຫາລະດັບສູງ ມີ 2500 ຄຳສັບ. ລວມບົດຄວາມຈີນແທ້, ເຕັກນິກການຂຽນບົດຄວາມ, ແລະ ການກຽມຄວາມຊຳນານຂັ້ນສູງ.",
+                    th: "เนื้อหาระดับสูง มี 2500 คำศัพท์ รวมบทความจีนแท้ เทคนิคการเขียนเรียงความ และการเตรียมความเชี่ยวชาญขั้นสูง"
+                },
+                image: "src/asset/img/Books/3DBOOKS/HSK_5_CILI_3D_No_Background.png",
+                words: 2500, lessons: 35, tests: 12,
+                color: "#ef4444"
+            },
+            6: {
+                title: { en: "HSK 6 Book", lo: "ປຶ້ມ HSK 6", th: "หนังสือ HSK 6" },
+                chinese: "高级二",
+                level: { en: "Mastery Level", lo: "ລະດັບຊຳນານ", th: "ระดับเชี่ยวชาญ" },
+                description: {
+                    en: "Mastery level with 5000+ vocabulary words. Complete preparation for the highest HSK level with professional-grade materials and comprehensive answer keys.",
+                    lo: "ລະດັບຊຳນານ ມີ 5000+ ຄຳສັບ. ກຽມຄົບຖ້ວນສຳລັບ HSK ລະດັບສູງສຸດດ້ວຍເອກະສານລະດັບມືອາຊີບ ແລະ ເຉລຍຄົບຖ້ວນ.",
+                    th: "ระดับเชี่ยวชาญ มี 5000+ คำศัพท์ เตรียมครบถ้วนสำหรับ HSK ระดับสูงสุดด้วยเอกสารระดับมืออาชีพและเฉลยครบถ้วน"
+                },
+                image: "src/asset/img/Books/3DBOOKS/HSK_6_CILI_3D_No_Background.png",
+                words: "5000+", lessons: 40, tests: 15,
+                color: "#1e3a5f"
+            }
+        };
+
+        // Get book level from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const bookLevel = parseInt(urlParams.get('level')) || 1;
+        let currentLang = localStorage.getItem('preferredLanguage') || 'en';
+
+        // Initialize page
+        function initPage() {
+            const book = bookData[bookLevel];
+            if (!book) return;
+
+            // Update page title
+            document.title = `HSK ${bookLevel} - CILI Books`;
+
+            // Update book image
+            document.getElementById('bookImage').src = book.image;
+            
+            // Update badge
+            document.getElementById('levelBadge').textContent = `HSK ${bookLevel}`;
+            document.getElementById('levelBadge').style.background = `linear-gradient(135deg, ${book.color}, ${book.color}dd)`;
+
+            // Update stats
+            document.getElementById('wordCount').textContent = book.words;
+            document.getElementById('lessonCount').textContent = book.lessons;
+            document.getElementById('testCount').textContent = book.tests;
+
+            // Update text content
+            updateBookContent(currentLang);
+
+            // Generate other books
+            generateOtherBooks();
+        }
+
+        function updateBookContent(lang) {
+            const book = bookData[bookLevel];
+            
+            // Update book title
+            const titleEl = document.getElementById('bookTitle');
+            titleEl.textContent = book.title[lang] || book.title.en;
+            titleEl.dataset.en = book.title.en;
+            titleEl.dataset.lo = book.title.lo;
+            titleEl.dataset.th = book.title.th;
+
+            // Update chinese text
+            document.getElementById('bookChinese').textContent = book.chinese;
+
+            // Update level
+            const levelEl = document.getElementById('bookLevel');
+            levelEl.textContent = book.level[lang] || book.level.en;
+            levelEl.dataset.en = book.level.en;
+            levelEl.dataset.lo = book.level.lo;
+            levelEl.dataset.th = book.level.th;
+
+            // Update description
+            const descEl = document.getElementById('bookDescription');
+            descEl.textContent = book.description[lang] || book.description.en;
+            descEl.dataset.en = book.description.en;
+            descEl.dataset.lo = book.description.lo;
+            descEl.dataset.th = book.description.th;
+        }
+
+        function generateOtherBooks() {
+            const grid = document.getElementById('otherBooksGrid');
+            grid.innerHTML = '';
+
+            for (let i = 1; i <= 6; i++) {
+                if (i === bookLevel) continue;
+                
+                const book = bookData[i];
+                const card = document.createElement('a');
+                card.href = `book-detail.html?level=${i}`;
+                card.className = 'other-book-card';
+                card.innerHTML = `
+                    <div class="other-book-image">
+                        <img src="${book.image}" alt="HSK ${i}">
+                    </div>
+                    <div class="other-book-info">
+                        <span class="other-book-badge" style="background: ${book.color}">HSK ${i}</span>
+                        <h4>${book.title.en}</h4>
+                        <p>${book.level.en}</p>
+                    </div>
+                `;
+                grid.appendChild(card);
+            }
+        }
+
+        // Language Dropdown
+        const dropdownBtn = document.querySelector('.dropdown-btn');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        const dropdownItems = document.querySelectorAll('.dropdown-menu li');
+        const currentLangSpan = document.querySelector('.current-lang');
+        const translatableElements = document.querySelectorAll('[data-en]');
+
+        dropdownBtn.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.language-dropdown')) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            const langNames = { en: 'EN', lo: 'ລາວ', th: 'ไทย' };
+            currentLangSpan.textContent = langNames[lang];
+
+            dropdownItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.dataset.lang === lang) {
+                    item.classList.add('active');
+                }
+            });
+
+            translatableElements.forEach(el => {
+                const text = el.dataset[lang] || el.dataset.en;
+                if (text) {
+                    el.textContent = text;
+                }
+            });
+
+            document.body.className = '';
+            if (lang === 'lo') {
+                document.body.classList.add('lang-lao');
+            } else if (lang === 'th') {
+                document.body.classList.add('lang-thai');
+            }
+
+            dropdownMenu.classList.remove('show');
+            localStorage.setItem('preferredLanguage', lang);
+
+            // Update book content
+            updateBookContent(lang);
+        }
+
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', () => {
+                setLanguage(item.dataset.lang);
+            });
+        });
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navRight = document.querySelector('.nav-right');
+            const menuToggle = document.querySelector('.menu-toggle');
+            navRight.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        }
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navRight = document.querySelector('.nav-right');
+                const menuToggle = document.querySelector('.menu-toggle');
+                navRight.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+
+        // Load saved language and initialize
+        const savedLang = localStorage.getItem('preferredLanguage');
+        if (savedLang) {
+            setLanguage(savedLang);
+        }
+        initPage();
+    </script>
+</body>
+</html>
